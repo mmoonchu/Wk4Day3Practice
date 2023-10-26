@@ -1,21 +1,21 @@
 ////////////////////////////////
 // Easy Going
 ////////////////////////////////
-for (i = 1; i <= 20; i++) {
+for (let i = 1; i <= 20; i++) {
     console.log(i);
 }
 
 ////////////////////////////////
 // Get Even
 ////////////////////////////////
-for (i = 0; i <= 200; i += 2) {
+for (let i = 0; i <= 200; i += 2) {
     console.log(i);
 }
 
 ////////////////////////////////
 // Fizz Buzz
 ////////////////////////////////
-for (i = 1; i <= 100; i += 1) {
+for (let i = 1; i <= 100; i += 1) {
     if (i % 15 == 0) console.log("FizzBuzz");
     else if (i % 3 == 0) console.log("Fizz");
     else if (i % 5 == 0) console.log("Buzz");
@@ -109,7 +109,7 @@ findWaldo(whereIsWaldo);
 //  Excited Kitten
 ////////////////////////////////
 const messages = ['...human...why you taking pictures of me?...', '...the catnip made me do it...', '...why does the red dot always get away...'];
-for (i = 0; i < 20; i++) {
+for (let i = 0; i < 20; i++) {
     if (i % 2 === 0) {
         const message1 = messages[Math.floor(Math.random() * 3)];
         console.log(message1);
@@ -175,3 +175,13 @@ console.log(`Today, Kristyn is wearing ${announceOutfit(kristynsOutfit1)}`);
 console.log(`Today, Thom is wearing ${announceOutfit(thomsOutfit2)}`);
 
 //  Dirty Laundry
+kristynsCloset.forEach(item => {
+    console.log(`WHIRR: Now washing ${item}`);
+});
+
+// Inventory
+for (let i = 0, j = thomsCloset.length; i < j; i++) {
+    for (let k = 0, l = thomsCloset[i].length; k < l; k++) {
+        console.log(thomsCloset[i][k]);
+    }
+}
