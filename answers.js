@@ -77,7 +77,33 @@ console.log(favMovies.indexOf('Fast and Furious')); // we get -1
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
-
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+// Remove Eggbert
+whereIsWaldo.splice(whereIsWaldo.indexOf('Eggbert'), 1);
+// Change "Neff" to "No One"
+for (array of whereIsWaldo) {
+    if (array.includes('Neff')) {
+        array[array.indexOf('Neff')] = 'No One';
+        break
+    }
+};
+// Access and console.log "Waldo"
+const findWaldo = function(array) { 
+    // checks for Waldo
+    if (array.includes('Waldo')) {
+        console.log(array.splice(array.indexOf('Waldo'), 1));
+    // checking nested arrays, if any
+    } else if (array.some(Array.isArray)) {
+        array.forEach(element => {
+            if (Array.isArray(element)) {
+                findWaldo(element);
+            }
+        })
+    }
+}
+findWaldo(whereIsWaldo);
 
 ////////////////////////////////
 //  Excited Kitten
