@@ -47,7 +47,32 @@ for (const turtle of ninjaTurtles) {
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+console.log(favMovies.indexOf('Titanic'));
 
+// 1.
+// favMovies.sort(); // yes
+// 2.
+favMovies.pop();
+// 3.
+favMovies.push('Guardians of the Galaxy');
+// 4.
+favMovies.reverse();
+// 5.
+favMovies.shift();
+// 6.
+favMovies.unshift(); // length of array
+// 7.
+favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar'); // yes
+// 8. + 9.
+const lastHalfOfFavMovies = favMovies.slice((favMovies.length / 2)) // no
+console.log(lastHalfOfFavMovies);
+// 10.
+console.log(favMovies);
+// 11.
+console.log(favMovies.indexOf('Fast and Furious')); // we get -1
+// 12.
+// No; the array is immutable, but its elements remain mutable, making const arrays more sturdy
 
 ////////////////////////////////
 // Where is Waldo
