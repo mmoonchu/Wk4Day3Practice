@@ -108,7 +108,14 @@ findWaldo(whereIsWaldo);
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
-
+const messages = ['...human...why you taking pictures of me?...', '...the catnip made me do it...', '...why does the red dot always get away...'];
+for (i = 0; i < 20; i++) {
+    if (i % 2 === 0) {
+        const message1 = messages[Math.floor(Math.random() * 3)];
+        console.log(message1);
+    }
+    console.log('Love me, pet me! HSSSSSS!');
+} 
 
 ////////////////////////////////
 //  Find the Median
