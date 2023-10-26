@@ -122,3 +122,56 @@ for (i = 0; i < 20; i++) {
 ////////////////////////////////
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 console.log(nums[Math.floor(nums.sort().length / 2)]);
+
+////////////////////////////////
+//  Return of the Closets
+////////////////////////////////
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+//  Alien Attire
+const kristynsShoe = kristynsCloset.splice(0, 1)[0];
+thomsCloset[2].push(kristynsShoe);
+
+//  Dress Us Up
+const kristynsOutfit1 = [kristynsCloset[0], kristynsCloset[2], kristynsCloset[3]];
+const kristynsOutfit2 = [kristynsCloset[1], kristynsCloset[2], thomsCloset[1][2]];
+const kristynsOutfit3 = [kristynsCloset[0], thomsCloset[0][1], kristynsCloset[3]];
+const thomsOutfit1 = [thomsCloset[0][0], thomsCloset[1][0], thomsCloset[2][1]];
+const thomsOutfit2 = [thomsCloset[0][2], thomsCloset[1][1], thomsCloset[2][0]];
+const thomsOutfit3 = [kristynsCloset[2], thomsCloset[1][2]];
+
+const announceOutfit = function(outfit) {
+    return outfit.slice(0, outfit.length - 1).join(`, `) + `, and ` + outfit[outfit.length - 1];
+}
+console.log(`Today, Kristyn is wearing ${announceOutfit(kristynsOutfit1)}`);
+console.log(`Today, Thom is wearing ${announceOutfit(thomsOutfit2)}`);
+
+//  Dirty Laundry
