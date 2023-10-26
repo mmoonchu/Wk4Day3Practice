@@ -65,7 +65,7 @@ favMovies.unshift(); // length of array
 // 7.
 favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar'); // yes
 // 8. + 9.
-const lastHalfOfFavMovies = favMovies.slice((favMovies.length / 2)) // no
+const lastHalfOfFavMovies = favMovies.slice((Math.floor(favMovies.length / 2))) // no
 console.log(lastHalfOfFavMovies);
 // 10.
 console.log(favMovies);
@@ -120,3 +120,5 @@ for (i = 0; i < 20; i++) {
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+console.log(nums[Math.floor(nums.sort().length / 2)]);
